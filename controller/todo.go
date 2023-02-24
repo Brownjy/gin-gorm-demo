@@ -7,7 +7,7 @@ import (
 	"net/http"
 )
 
-// 创建一个todo
+// CreateTodo 创建一个todo
 func CreateTodo(c *gin.Context) {
 	//1.从请求中把数据拿出来
 	var todo model.Todo
@@ -30,6 +30,7 @@ func CreateTodo(c *gin.Context) {
 	}
 }
 
+// UpdateATodo 更新一个todo
 func UpdateATodo(c *gin.Context) {
 	// 解析URL参数
 	id, ok := c.Params.Get("id")
@@ -52,6 +53,7 @@ func UpdateATodo(c *gin.Context) {
 	}
 }
 
+// GetTodoList 获取todoList
 func GetTodoList(c *gin.Context) {
 	// 获取所有todoList
 	todoList, err := model.GetAllTodo()
@@ -62,6 +64,7 @@ func GetTodoList(c *gin.Context) {
 	}
 }
 
+// DeleteATodo 删除一个todo
 func DeleteATodo(c *gin.Context) {
 	id, ok := c.Params.Get("id")
 	if !ok {
