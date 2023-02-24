@@ -1,0 +1,6 @@
+MySql:
+  User: root
+  Pass: zjy216772
+  IP: 127.0.0.1
+  Port: 3306
+  Database: gin_project
